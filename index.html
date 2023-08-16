@@ -78,7 +78,8 @@
         $('#modname').text($(this).children(".name").eq(0).text());
         $('#modphone').text($(this).children(".phone").eq(0).text());
         $('#modmail').text($(this).children(".mail").eq(0).text());
-        $('#moddate').text($(this).children(".name").eq(0).text());
+        var date = new Date($(this).children(".hire").eq(0).text());
+        $('#moddate').text(date.toLocaleDateString());
         $('#modposition').text($(this).children(".position").eq(0).text());
         $('#moddepartment').text($(this).children(".department").eq(0).text());
         $('#modalback').css('display', 'flex');
